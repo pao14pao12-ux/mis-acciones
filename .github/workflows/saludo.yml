@@ -1,0 +1,12 @@
+name: Saludo reutilizable
+on:
+  workflow_call:
+    inputs:
+      nombre:
+        required: true
+        type: string
+jobs:
+  saludar:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hola ${{ inputs.nombre }}"

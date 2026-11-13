@@ -1,0 +1,7 @@
+name: Principal
+on: [push]
+jobs:
+  llamar:
+    uses: ./.github/workflows/saludo.yml
+    with:
+      nombre: Javier
