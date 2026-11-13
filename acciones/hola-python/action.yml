@@ -1,0 +1,11 @@
+name: Hola Python
+description: Corre un script de Python que saluda
+inputs:
+  nombre:
+    description: Nombre a saludar
+    required: true
+runs:
+  using: composite
+  steps:
+    - run: python3 "${{ github.action_path }}/saludo.py" "${{ inputs.nombre }}"
+      shell: bash
